@@ -1,36 +1,82 @@
 #resume {
     font-family: 'EB Garamond', serif;
-    COLOR: #101419;
-    display: flex; 
-    flex-direction: column; 
-    flex: 1; 
-    width: 100%
+    color: black;
+    width: 100%;
+    font-size: .85em;
+    max-width: 720px;
+}
+@media(min-width: 720px){
+    #resume {
+        font-size: 1em;
+    }
 }
 #resume-top {
-    padding: 20px;
-    font-size: 1.5em;
+    padding: 20px 7px;
     text-align: center;
     display: flex;
+    flex-direction: column
+}
+#resume-top > div {
+    display: flex;
+    flex-direction: row;
 }
 #resume-title {
-    flex: 5
+    flex: 5;
+    font-size: 1.25em;
+}
+#resume-address {
+    flex: 1;
+}
+.resume-date-right {
+    flex: 1;
+    text-align: right;
 }
 .resume-print {
     display: flex;
-    font-size: .75em;
     flex:1;
     align-items: center;
     justify-content: flex-end;
     cursor: pointer;
 }
 #resume-content {
-    padding: 0 20px 25px;
-    display: flex;
-    flex-direction: column; 
-    flex: 1;
-    text-align: center;
+    padding: 0 7px 25px;
 }
 /* //todo rename */
 #resume-content > div{
     flex: 1;
+}
+.resume-list {
+    margin: 3px;
+}
+.resume-item {
+    /* display: flex; */
+    flex-direction: column;
+    padding: 5px 0;
+}
+.resume-general-description {
+    padding: 5px 0;
+}
+.resume-main-bold {
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+.resume-title-underline {
+    text-decoration: underline;
+}
+.resume-company-italic {
+    font-style: italic;
+}
+.company-container {
+    display: flex;
+}
+.resume-skill-container {
+    display: flex;
+}
+.resume-skill-title {
+    min-width: 5.5em;
+    text-decoration: underline;
+}
+.resume-project-title {
+    padding: 5px;
+    text-decoration: underline;
 }

@@ -88,7 +88,8 @@ i{
 #resume-page {
     margin: -29px -4px -29px -20px;
     padding-left: 25px;
-    background: url(https://image.freepik.com/free-photo/white-paper-background_1154-683.jpg);
+    background-image: url('../../../assets/resume.png');
+    background-repeat: repeat;
     background-size: cover;
     justify-content: flex-start !important;
     max-height: calc(100vh - 48px) !important;
