@@ -1,0 +1,23 @@
+.slider-container{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.slider-container > div{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa-circle{
+    color: grey;
+}
+
+.fa-circle.active{
+    color: orangered;
+}
+
+.active{
+    color: orangered;
+}

@@ -1,0 +1,5 @@
+<div class="slider-container">
+    <div *ngFor="let pageMarker of pages; index as i">
+        <i class="fa fa-circle" [ngClass]="{active: i === currentPage}"></i>
+    </div>
+</div>

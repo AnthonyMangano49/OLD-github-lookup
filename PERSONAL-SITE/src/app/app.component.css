@@ -1,17 +1,1 @@
-.main-container{
-    min-height: 100vh;
-    background: orangered;
-    display: flex;
 
-}.content-container, .sidebar-container{
-    background-color: #e6e6e6;
-    padding: 5px;
-    text-align: center;
-}
-.content-container{
-    flex: 5;
-}
-.sidebar-container{
-    flex: 2;
-    margin: 0 2px;
-}
