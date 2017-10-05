@@ -10,7 +10,7 @@ i{
 #top-bar{
     display: flex;
     margin: -5px -5px 0;
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid #45556a
 }
 @media (min-width: 500px){
     #top-bar-spacer{

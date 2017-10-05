@@ -29,9 +29,10 @@
     margin: auto;
     padding: 2px;
 }
-img {
+.recent-work-item img {
     max-width: 100%;
     display: block;
+    cursor: pointer;
 }
 .garage-img {
     content: url('../../../assets/garage-small.png')

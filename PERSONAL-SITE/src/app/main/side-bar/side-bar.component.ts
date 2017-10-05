@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { WorkItem, WorkItems} from './work-items';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'side-bar',
@@ -7,33 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SideBarComponent implements OnInit {
 
-  constructor() { }
+  workItems: Array<WorkItem>
 
+  constructor(private router: Router) { }
   ngOnInit() {
+    this.workItems = WorkItems;
   }
 
-  workItem = [
-    {
-      id: 0,
-      name: 'A4 Garage App',
-      description: 'todo',
-      img: 'garage-img'
-    },{
-      id: 0,
-      name: 'Chatbot',
-      description: 'todo',
-      img: 'chat-img'
-    },{
-      id: 0,
-      name: 'The Mangano Collective',
-      description: 'todo',
-      img: 'tmc-img'
-    },{
-      id: 0,
-      name: 'A4 Garage App',
-      description: 'todo',
-      img: 'github-img'
-    }
-  ]
+  navigate(item: WorkItem){
+    if(item.route.isHref){
+      window.open(item.route.value);
+    } else if(!item.route.isHref){
+      this.router.navigate([item.route.value]);
+    } else
+      console.error('Invalid route type: side-bar 25');
+  }
 
 }
