@@ -12,4 +12,28 @@ export class SideBarComponent implements OnInit {
   ngOnInit() {
   }
 
+  workItem = [
+    {
+      id: 0,
+      name: 'A4 Garage App',
+      description: 'todo',
+      img: 'garage-img'
+    },{
+      id: 0,
+      name: 'Chatbot',
+      description: 'todo',
+      img: 'chat-img'
+    },{
+      id: 0,
+      name: 'The Mangano Collective',
+      description: 'todo',
+      img: 'tmc-img'
+    },{
+      id: 0,
+      name: 'A4 Garage App',
+      description: 'todo',
+      img: 'github-img'
+    }
+  ]
+
 }

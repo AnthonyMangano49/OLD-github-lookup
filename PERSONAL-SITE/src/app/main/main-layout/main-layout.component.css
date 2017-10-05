@@ -8,24 +8,53 @@ i{
     cursor: pointer;
 }
 #top-bar{
+    display: flex;
     margin: -5px -5px 0;
-    padding: 5px;
     border-bottom: 1px solid grey;
-    text-align: right;
 }
-
+@media (min-width: 500px){
+    #top-bar-spacer{
+        flex: 1 !important;
+    }
+}
+@media (min-width: 760px){
+    #top-bar-spacer{
+        flex: 3 !important;
+    }
+}
+@media (min-width: 1020px){
+    #top-bar-spacer{
+        flex: 5 !important;
+    }
+}
+#top-bar-spacer{
+    flex: 0;
+}
+.top-bar-button{
+    flex: 1;
+    text-align: center;
+    padding: 2px;
+    color: white;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+#github{
+    background: #add9f4;
+}
+#contact{
+    background: #eb812e;
+}
 #content-container, #sidebar-container{
     display: flex;
     flex-direction: column;
     background: #101419;
-    padding: 5px;
 }
 #content-container{
     flex: 5;
+    padding: 5px;
 }
 #sidebar-container{
     flex: 2;
-    margin: 0 2px;
 }
 #content{
     flex: 1;
@@ -36,6 +65,10 @@ i{
     display: flex;
     justify-content: center;
     color: #eb812e
+}
+.blend{
+    color: #101419;
+    cursor: default;
 }
 #pages{
     flex: 1;

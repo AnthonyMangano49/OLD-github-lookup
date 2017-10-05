@@ -8,14 +8,15 @@ import { NavigationService } from '../shared/navigation.service';
   styleUrls: ['./main-layout.component.css']
 })
 export class MainLayoutComponent implements OnInit {
+  pages: Array<Page>
   currentPage: Page;
   test;
   
   constructor(private nav: NavigationService) {}
   ngOnInit(): void {
+    this.pages = Pages;
     this.nav.currentPage.subscribe((page: Page) => {
       this.currentPage = page
-      console.log(this.currentPage);
     });
   }
 

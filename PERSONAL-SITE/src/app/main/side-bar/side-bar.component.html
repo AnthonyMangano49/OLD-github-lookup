@@ -1,3 +1,9 @@
-<p>
-  side-bar works!
-</p>
+<div id="title-container">
+  <i class="fa fa-briefcase"></i>
+  <br>Recent Work
+</div>
+<div id="recent-work-container">
+  <div class="recent-work-item" *ngFor="let item of workItem">
+    <img [class]="item.img">
+  </div>
+</div>
