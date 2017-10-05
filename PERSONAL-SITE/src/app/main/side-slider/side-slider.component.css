@@ -12,12 +12,9 @@
 
 .fa-circle{
     color: grey;
+    font-size: .5em;
 }
 
 .fa-circle.active{
-    color: orangered;
-}
-
-.active{
-    color: orangered;
+    color: #eb812e
 }

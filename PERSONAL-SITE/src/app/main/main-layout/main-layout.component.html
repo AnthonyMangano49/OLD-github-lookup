@@ -1,19 +1,26 @@
 <div id="main-container">
-  <div class="content-container">
-    top bar here
-    <hr>
-    <div id="slider-container">
-      <side-slider></side-slider>
+  <div id="content-container">
+    <div id="top-bar">
+        <i class="fa fa-github"></i>
     </div>
     <div id="content">
-      content here
-      <home></home>
-      <resume></resume>
-      <contact></contact>
+        <div id="slider">
+            <side-slider></side-slider>
+        </div>
+        <div id="pages" >
+            <div class="arrow" >
+                <i (click)="navigate(-1)"class="fa fa-chevron-up"></i>
+            </div>
+            <home class="page" *ngIf="currentPage.value === 'home'"></home>
+            <resume  class="page" *ngIf="currentPage.value === 'resume'"></resume>
+            <contact class="page"*ngIf="currentPage.value === 'contact'"></contact>
+            <div class="arrow">
+                <i (click)="navigate(1)" class="fa fa-chevron-down"></i>
+            </div>
+        </div>
     </div>
   </div>
-  <div class="sidebar-container">
-    sidebar here
+  <div id="sidebar-container">
     <side-bar></side-bar>
   </div>
 </div>
