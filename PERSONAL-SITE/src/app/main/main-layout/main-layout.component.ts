@@ -20,7 +20,11 @@ export class MainLayoutComponent implements OnInit {
     });
   }
 
-  navigate(input: number){
-    this.nav.next(this.currentPage, input);
+  externalNavigate(input: string){
+    window.open(input)
+  }
+
+  navigate(input: string | number) {
+    this.nav.navigate(this.currentPage, input);
   }
 }

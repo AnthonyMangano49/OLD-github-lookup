@@ -4,16 +4,14 @@
         <div id="top-bar-spacer">
             
         </div>
-        <div class="top-bar-button" id="github">
-                <i class="fa fa-github"></i>
-                <br> Github
+        <div class="top-bar-button" id="github" (click)="externalNavigate('https://github.com')">
+            <i class="fa fa-github"></i>
+            <br> Github
         </div>
-        <div class="top-bar-button" id="contact">
-                <i class="fa fa-pencil"></i>
-                <br>Contact Me
+        <div class="top-bar-button" id="contact" (click)="navigate('contact')">
+            <i class="fa fa-pencil"></i>
+            <br>Contact Me
         </div>
-        <!-- <i class="fa fa-github"></i>
-        <button id="top-bar-contact">Contact Me</button> -->
     </div>
     <div id="content">
         <div id="slider">
