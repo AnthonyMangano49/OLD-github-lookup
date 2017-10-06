@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { MainModule } from './main/main.module';
-import { ChatbotModule } from './chatbot/chatbot.module';
 import { RoutingModule } from './routing/routing.module';
 
 @NgModule({
@@ -13,8 +12,7 @@ import { RoutingModule } from './routing/routing.module';
   imports: [
     BrowserModule,
     RoutingModule,
-    MainModule,
-    ChatbotModule
+    MainModule
   ],
   providers: [],
   bootstrap: [AppComponent]
