@@ -12,9 +12,6 @@ export const routes: Routes = [
     }, {
         path: 'chat',
         loadChildren: '../chatbot/chatbot.module#ChatbotModule'
-    }, {
-        path: 'garage',
-        loadChildren: '../garage/garage.module#GarageModule'
     }, { 
       path: '**', 
       redirectTo: 'main'
