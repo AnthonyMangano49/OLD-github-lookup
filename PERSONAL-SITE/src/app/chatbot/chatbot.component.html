@@ -1,16 +1,27 @@
 <div id="chatbot-container">
   <div id="chatbot-main">
     <div id="chatbot-top-bar">
-      top bar
+      <i class="fa fa-home" routerLink="/main"></i>
     </div>
-    <div id="chatbot-message-container">
-      chatbot message container
+    <div id="chatbot-message-container" #scrollMe [scrollTop]="scrollMe.scrollHeight">
+      <div *ngIf="!currentChat.length" class="chat-message" >
+        <div [ngClass]="setMessageClass(defaultMessage.source)" >{{defaultMessage.message}}</div>
+      </div>
+      <div *ngFor="let messages of currentChat" class="chat-message" 
+        [ngClass]="{'chat-message-right' : messages.source === 'user'}">
+        <div [ngClass]="setMessageClass(messages.source)" >{{messages.message}}</div>
+      </div>
     </div>
     <div id="chatbot-input">
-      <textarea></textarea>
+      <textarea (keyup.enter)="submitMessage()" [(ngModel)] = "input"
+        placeholder="Shift+Enter To Start New Line...">
+      </textarea>
+      <div id="chatbot-submit"  (click)="submitMessage()">Send</div>
     </div>
   </div>
   <div id="chatbot-side">
-    side panel
+    <strong>Coming Soon</strong>
+    Chat Challenge <br>
+    Interactive Game
   </div>
 </div>
