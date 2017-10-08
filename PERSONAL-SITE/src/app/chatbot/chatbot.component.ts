@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ChatbotSources, ChatbotMessage } from './shared/chatbot-utilities';
 import { ChatbotService } from './shared/chatbot.service';
+import { Subject } from 'rxjs/Subject';
+import 'rxjs/add/operator/debounceTime';
 
 @Component({
   selector: 'app-chatbot',
@@ -11,6 +13,7 @@ export class ChatbotComponent implements OnInit {
   input: string;
   conversationId: string;
   currentChat: Array<ChatbotMessage>;
+  sendMessage = new Subject<string>();
   defaultMessage: ChatbotMessage;
 
   constructor(private chatbotService: ChatbotService) { }
@@ -26,6 +29,16 @@ export class ChatbotComponent implements OnInit {
       message: 'Welcome to chatbot, enter a message to get started...'
     };
     this.conversationId = '';
+
+    this.sendMessage
+      .debounceTime(1000)
+      .subscribe(input => {
+        this.chatbotService.sendMessage(input, this.conversationId)
+        .subscribe( response => {
+          this.conversationId = response.conversationId;
+          this.currentChat.push(response);
+        })
+      })
   }
   
   setMessageClass(source: string){
@@ -33,14 +46,10 @@ export class ChatbotComponent implements OnInit {
   }
 
   submitMessage() {
-    if(this.input) {
-      this.currentChat.push({source: 'user', message: this.input});
-      
-      this.chatbotService.sendMessage(this.input, this.conversationId)
-        .subscribe(response => {
-          this.conversationId = response.conversationId;
-          this.currentChat.push(response);
-        })
+    let input = this.input.trim();
+    if(input) {
+      this.currentChat.push({source: 'user', message: input});
+      this.sendMessage.next(input);
     }
     this.input = '';
   }

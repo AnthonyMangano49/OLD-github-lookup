@@ -2,8 +2,10 @@ import { Injectable } from '@angular/core';
 import { ApiCall } from './chatbot-config';
 import { Http } from '@angular/http';
 import { Observable }     from 'rxjs/Observable';
-import 'rxjs/add/operator/map';
 import { ChatbotMessage } from './chatbot-utilities';
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/catch';
+import 'rxjs/add/observable/of';
 
 @Injectable()
 export class ChatbotService {
@@ -27,7 +29,14 @@ export class ChatbotService {
           message: message.output,
           conversationId: message.cs
         }
+      }) 
+      .catch((error) => {
+        console.error(error)
+        return Observable.of(returnMessage = {
+          source: 'bot',
+          message: 'Chatbot down for maintenance, come back soon...',
+        });
       })
-  }
+    }
 
 }
