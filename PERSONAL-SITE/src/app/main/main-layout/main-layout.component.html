@@ -4,7 +4,7 @@
         <div id="top-bar-spacer">
             
         </div>
-        <div class="top-bar-button" id="github" (click)="externalNavigate('https://github.com')">
+        <div class="top-bar-button" id="github" (click)="externalNavigate('https://github.com/anthonymangano49')">
             <i class="fa fa-github"></i>
             <br> Github
         </div>
@@ -25,7 +25,7 @@
             <resume  class="page" *ngIf="currentPage.value === 'resume'"></resume>
             <contact class="page"*ngIf="currentPage.value === 'contact'"></contact>
             <div class="arrow">
-                <i (click)="navigate(1)" class="fa fa-chevron-down"  [ngClass] = "{blend: currentPage.id === pages.length - 1}"></i>
+                <i id="arrow-down" (click)="navigate(1)" class="fa fa-chevron-down"  [ngClass] = "{blend: currentPage.id === pages.length - 1}"></i>
             </div>
         </div>
     </div>

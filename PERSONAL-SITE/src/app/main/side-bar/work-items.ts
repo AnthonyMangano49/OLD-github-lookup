@@ -17,8 +17,8 @@ export const WorkItems: Array<WorkItem>= [
       description: 'todo',
       img: 'garage-img',
       route: {
-        isHref: false,
-        value: '/garage'
+        isHref: true,
+        value: 'http://angulargarage.info'
       }
     },{
       id: 1,
@@ -36,7 +36,7 @@ export const WorkItems: Array<WorkItem>= [
       img: 'tmc-img',
       route: {
         isHref: true,
-        value: 'https://themanganocollective.com'
+        value: 'http://themanganocollective.com'
       }
     },{
       id: 3,
@@ -45,7 +45,7 @@ export const WorkItems: Array<WorkItem>= [
       img: 'github-img',
       route: {
         isHref: true,
-        value: 'https://github.com'
+        value: 'https://github.com/anthonymangano49'
       }
     }
   ]

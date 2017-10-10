@@ -1,0 +1,12 @@
+#home-page{
+    padding: 10px;
+    text-align: center;
+    color: #eb812e;
+}
+
+#home-page-title{
+    color: #45556a;
+    font-size: 2em;
+    text-transform: uppercase;
+    font-weight: bold;
+}
