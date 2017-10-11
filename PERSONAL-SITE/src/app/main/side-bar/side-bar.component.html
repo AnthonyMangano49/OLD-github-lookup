@@ -3,7 +3,15 @@
   <br>Recent Work
 </div>
 <div id="recent-work-container">
-  <div class="recent-work-item" *ngFor="let item of workItems">
-    <img [class]="item.img" (click)="navigate(item)">
+  <div class="recent-work-item" *ngFor="let item of workItems" (click)="navigate(item)">
+    <div class="work-images-small">
+      <img [src]="'../../../assets/' + item.img + '-small.png'"/>
+    </div>
+    <div class="work-images-mid">
+      <img [src]="'../../../assets/' + item.img + '-mid.png'"/>
+    </div>
+    <div class="work-images-large">
+      <img [src]="'../../../assets/' + item.img + '-large.png'"/>
+    </div>
   </div>
 </div>

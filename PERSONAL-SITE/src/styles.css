@@ -3,4 +3,19 @@ body {
     margin: 0;
     color:#9fa1a3;
     font-family: 'Roboto Condensed', sans-serif;
+    overflow-y: hidden;
+}
+
+
+*::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+*::-webkit-scrollbar-track {
+    background: white;
+
+}
+*::-webkit-scrollbar-thumb {
+    background: #eb812e;
+    border: 1px solid #101419;
 }

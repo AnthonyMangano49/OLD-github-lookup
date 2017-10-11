@@ -13,19 +13,8 @@
     height: calc(100vh - 44px);
     overflow: auto;
     align-items: center;
+    overflow-x: hidden;
 }
-#recent-work-container::-webkit-scrollbar {
-    width: 12px;
-}
-#recent-work-container::-webkit-scrollbar-track {
-    background: white;
-
-}
-#recent-work-container::-webkit-scrollbar-thumb {
-    background: #eb812e;
-    border: 1px solid #101419;
-}
-
 .recent-work-item{
     margin: auto;
     padding: 2px;
@@ -35,43 +24,78 @@
     display: block;
     cursor: pointer;
 }
-.garage-img {
+
+.work-images-small {
+    display: block;
+}
+.work-images-mid {
+    display: none;
+}
+.work-images-large {
+    display: none;
+}
+
+@media(min-width: 600px) {
+    .work-images-small {
+        display: none;
+    }
+    .work-images-mid {
+        display: block;
+    }
+    .work-images-large {
+        display: none;
+    }
+}
+
+@media(min-width: 1000px) {
+    .work-images-small {
+        display: none;
+    }
+    .work-images-mid {
+        display: none;
+    }
+    .work-images-large {
+        display: block;
+    }
+}
+
+/* .garage-img, .garage-img::after {
     content: url('../../../assets/garage-small.png')
 }
-.chat-img {
+.chat-img, .chat-img::after {
     content: url('../../../assets/chat-small.png')
 }
-.tmc-img {
+.tmc-img, .tmc-img::after {
     content: url('../../../assets/tmc-small.png')
 }
-.github-img {
+.github-img, .github-img::after {
     content: url('../../../assets/github-small.png')
 }
 @media(min-width: 600px){
-    .garage-img {
+    .garage-img, .garage-img::after {
         content: url('../../../assets/garage-mid.png')
     }
-    .chat-img {
+    .chat-img, .chat-img::after {
         content: url('../../../assets/chat-mid.png')
     }
-    .tmc-img {
+    .tmc-img, .tmc-img::after {
         content: url('../../../assets/tmc-mid.png')
     }
-    .github-img {
+    .github-img, .github-img::after {
         content: url('../../../assets/github-mid.png')
     }
 }
 @media(min-width: 1000px){
-    .garage-img {
+    .garage-img, .garage-img::after {
         content: url('../../../assets/garage-large.png')
     }
-    .chat-img {
+    .chat-img, .chat-img::after {
         content: url('../../../assets/chat-large.png')
     }
-    .tmc-img {
+    .tmc-img, .tmc-img::after {
         content: url('../../../assets/tmc-large.png')
     }
-    .github-img {
+    .github-img, .github-img::after {
         content: url('../../../assets/github-large.png')
     }   
-}
+} */

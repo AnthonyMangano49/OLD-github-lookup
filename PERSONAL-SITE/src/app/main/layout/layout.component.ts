@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { Page, Pages } from '../shared/utilities';
-import { NavigationService } from '../shared/navigation.service';
+import { Page, Pages } from '../pages/utilities';
+import { NavigationService } from '../navigation/navigation.service';
 
 @Component({
-  selector: 'main-layout',
-  templateUrl: './main-layout.component.html',
-  styleUrls: ['./main-layout.component.css']
+  selector: 'layout',
+  templateUrl: './layout.component.html',
+  styleUrls: ['./layout.component.css']
 })
-export class MainLayoutComponent implements OnInit {
+export class LayoutComponent implements OnInit {
   pages: Array<Page>
   currentPage: Page;
   test;

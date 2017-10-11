@@ -15,7 +15,7 @@ export const WorkItems: Array<WorkItem>= [
       id: 0,
       name: 'A4 Garage App',
       description: 'todo',
-      img: 'garage-img',
+      img: 'garage',
       route: {
         isHref: true,
         value: 'http://angulargarage.info'
@@ -24,7 +24,7 @@ export const WorkItems: Array<WorkItem>= [
       id: 1,
       name: 'Chatbot',
       description: 'todo',
-      img: 'chat-img',
+      img: 'chat',
       route: {
         isHref: false,
         value: '/chat'
@@ -33,7 +33,7 @@ export const WorkItems: Array<WorkItem>= [
       id: 2,
       name: 'The Mangano Collective',
       description: 'todo',
-      img: 'tmc-img',
+      img: 'tmc',
       route: {
         isHref: true,
         value: 'http://themanganocollective.com'
@@ -42,7 +42,7 @@ export const WorkItems: Array<WorkItem>= [
       id: 3,
       name: 'Github',
       description: 'todo',
-      img: 'github-img',
+      img: 'github',
       route: {
         isHref: true,
         value: 'https://github.com/anthonymangano49'

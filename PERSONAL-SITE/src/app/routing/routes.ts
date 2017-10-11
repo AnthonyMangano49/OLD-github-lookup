@@ -1,5 +1,5 @@
 import { Routes } from "@angular/router";
-import { MainLayoutComponent } from "../main/main-layout/main-layout.component";
+import { LayoutComponent } from "../main/layout/layout.component";
 
 export const routes: Routes = [
     {
@@ -8,7 +8,7 @@ export const routes: Routes = [
         pathMatch: 'full'
     }, {
         path: 'main',
-        component: MainLayoutComponent
+        component: LayoutComponent
     }, {
         path: 'chat',
         loadChildren: '../chatbot/chatbot.module#ChatbotModule'

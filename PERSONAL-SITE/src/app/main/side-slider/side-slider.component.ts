@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { NavigationService } from '../shared/navigation.service';
-import { Pages, Page } from '../shared/utilities';
+import { NavigationService } from '../navigation/navigation.service';
+import { Page, Pages } from '../pages/utilities';
 
 @Component({
   selector: 'side-slider',

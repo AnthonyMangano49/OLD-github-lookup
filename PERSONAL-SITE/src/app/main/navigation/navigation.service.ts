@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Page, Pages } from './utilities';
-
 import {BehaviorSubject} from 'rxjs/BehaviorSubject';
+import { Page, Pages } from '../pages/utilities';
 
 @Injectable()
 export class NavigationService {
