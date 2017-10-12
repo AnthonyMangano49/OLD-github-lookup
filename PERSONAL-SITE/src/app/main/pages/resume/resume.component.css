@@ -1,6 +1,6 @@
 #resume {
     font-family: 'EB Garamond', serif;
-    color: black;
+    color: black !important;
     width: 100%;
     font-size: .85em;
     max-width: 720px;
@@ -9,6 +9,9 @@
     #resume {
         font-size: 1em;
     }
+}
+#resume a {
+    color: black;
 }
 #resume-top {
     padding: 20px 7px;
@@ -72,11 +75,13 @@
 .resume-skill-container {
     display: flex;
 }
+.resume-skill-container, .resume-project-container {
+    padding: 10px 0;
+}
 .resume-skill-title {
     min-width: 5.5em;
     text-decoration: underline;
 }
 .resume-project-title {
-    padding: 5px;
     text-decoration: underline;
 }
