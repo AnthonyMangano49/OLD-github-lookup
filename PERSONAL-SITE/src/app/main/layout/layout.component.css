@@ -11,11 +11,6 @@ i{
     display: flex;
     border-bottom: 1px solid #45556a
 }
-@media (min-width: 500px){
-    #top-bar-spacer{
-        flex: 1 !important;
-    }
-}
 @media (min-width: 760px){
     #top-bar-spacer{
         flex: 3 !important;
@@ -37,10 +32,13 @@ i{
     cursor: pointer;
     text-transform: uppercase;
 }
-#github{
+#top-resume {
+    background: grey;
+}
+#top-github{
     background: #add9f4;
 }
-#contact{
+#top-contact{
     background: #eb812e;
 }
 #content-container, #sidebar-container{

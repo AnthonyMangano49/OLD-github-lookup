@@ -4,13 +4,17 @@
         <div id="top-bar-spacer">
             
         </div>
-        <div class="top-bar-button" id="github" (click)="externalNavigate('https://github.com/anthonymangano49')">
+        <div class="top-bar-button" id="top-resume" (click)="hybridNavigate('../../../assets/Anthony_Mangano_Resume.pdf', 'resume')">
+            <i class="fa fa-file-text"></i>
+            <br> Resume
+        </div>
+        <div class="top-bar-button" id="top-github" (click)="externalNavigate('https://github.com/anthonymangano49')">
             <i class="fa fa-github"></i>
             <br> Github
         </div>
-        <div class="top-bar-button" id="contact" (click)="navigate('contact')">
+        <div class="top-bar-button" id="top-contact" (click)="navigate('contact')">
             <i class="fa fa-pencil"></i>
-            <br>Contact Me
+            <br>Contact
         </div>
     </div>
     <div id="content">

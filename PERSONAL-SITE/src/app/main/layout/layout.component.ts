@@ -20,6 +20,11 @@ export class LayoutComponent implements OnInit {
     });
   }
 
+  hybridNavigate(externalInput: string, internalInput: string | number) {
+    this.navigate(internalInput);
+    setTimeout(() => this.externalNavigate(externalInput), 1000);
+  }
+
   externalNavigate(input: string){
     window.open(input)
   }
