@@ -25,7 +25,7 @@
             <div class="arrow">
                 <i (click)="navigate(-1)"class="fa fa-arrow-up" [ngClass] = "{blend: currentPage.id === 0}"></i>
             </div>
-            <home class="page" *ngIf="currentPage.value === 'home'"></home>
+            <home id="home-page" class="page" *ngIf="currentPage.value === 'home'"></home>
             <resume  id="resume-page" class="page" *ngIf="currentPage.value === 'resume'"></resume>
             <contact class="page"*ngIf="currentPage.value === 'contact'"></contact>
             <div class="arrow">

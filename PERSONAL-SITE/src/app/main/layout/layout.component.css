@@ -78,10 +78,13 @@ i{
     flex: 1;    
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     overflow: auto;
     max-height: calc(100vh - 105px);
+}
+#home-page {
+    justify-content: center !important;
 }
 #resume-page {
     margin: -29px -4px -29px -20px;
@@ -89,6 +92,5 @@ i{
     background-image: url('../../../assets/resume.png');
     background-repeat: repeat;
     background-size: cover;
-    justify-content: flex-start !important;
     max-height: calc(100vh - 48px) !important;
 }

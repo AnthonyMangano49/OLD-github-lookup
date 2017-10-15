@@ -1,0 +1,43 @@
+#contact-page {
+    width: 100%;
+}
+#contact-page * {
+    border: none;
+    outline: none;
+}
+#contact-container {
+    margin: auto;
+    max-width: 720px;
+    padding: 10px;
+    background: #45556a;
+}
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+#contact-message {
+    font-weight: bold;
+    text-align: center;
+}
+.contact-label, .contact-button{
+    background: #101419;
+    flex: 1;
+    padding: 10px;
+    color: white;
+    text-align: center;
+}
+.contact-input, .contact-select, .contact-textbox {
+    flex: 1;
+    padding: 10px;
+}
+.contact-textbox{
+    resize: none
+}
+.contact-button{
+    cursor: pointer;
+}
+.contact-button:active{
+    background: white;
+    color: #101419;
+}

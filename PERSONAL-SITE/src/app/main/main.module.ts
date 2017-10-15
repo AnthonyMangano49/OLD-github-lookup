@@ -7,10 +7,14 @@ import { LayoutComponent } from './layout/layout.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ResumeComponent } from './pages/resume/resume.component';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule,
+    HttpModule
   ],
   declarations: [LayoutComponent, SideBarComponent, SideSliderComponent, ContactComponent, HomeComponent, ResumeComponent],
   providers: [NavigationService],

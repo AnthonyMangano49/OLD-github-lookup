@@ -1,3 +1,44 @@
-<p>
-  contact works!
-</p>
+<div id="contact-page">
+  <div id="contact-container">
+    <div class="contact-item" id="contact-message">
+      {{message}}
+    </div>
+    <div class="contact-item">
+      <label class="contact-label">
+        I'm A(n)
+      </label>
+      <select class="contact-select" [(ngModel)]="form.category">
+        <option>Business</option>
+        <option>Recruiter</option>
+        <option>Individual</option>
+      </select>
+    </div>
+    <div class="contact-item">
+      <label class="contact-label">
+        My Name Is  
+      </label>
+      <input class="contact-input" placeholder = "subject..." [(ngModel)]="form.name">
+    </div>
+    <div class="contact-item">
+      <label class="contact-label">
+        You Should Know
+      </label>
+      <textarea rows="3" class="contact-textbox" placeholder = "message..." [(ngModel)]="form.message"></textarea>
+    </div>
+    <div class="contact-item">
+      <label class="contact-label">
+        Try My E-Mail
+      </label>
+      <input class="contact-input" placeholder = "email..." [(ngModel)]="form.email">
+    </div>
+    <div class="contact-item">
+      <label class="contact-label">
+        Or Call
+      </label>
+      <input class="contact-input" placeholder = "phone..." [(ngModel)]="form.phone">
+    </div>
+    <div class="contact-item">
+      <button class="contact-button" (click)="submit()">Let's Talk</button>
+    </div>
+  </div>
+</div>
