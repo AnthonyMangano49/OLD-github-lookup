@@ -1,15 +1,15 @@
 import { TestBed, inject } from '@angular/core/testing';
 
-import { ChatbotServiceService } from './chatbot.service';
+import { ChatbotService } from './chatbot.service';
 
 describe('ChatbotServiceService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [ChatbotServiceService]
+      providers: [ChatbotService]
     });
   });
 
-  it('should be created', inject([ChatbotServiceService], (service: ChatbotServiceService) => {
+  it('should be created', inject([ChatbotService], (service: ChatbotService) => {
     expect(service).toBeTruthy();
   }));
 });

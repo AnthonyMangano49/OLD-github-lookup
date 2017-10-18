@@ -75,16 +75,10 @@ i{
     padding: 0 5px;
 }
 #pages > .page{
-    flex: 1;    
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+    flex: 1;
     overflow: auto;
     max-height: calc(100vh - 105px);
-}
-#home-page {
-    justify-content: center !important;
 }
 #resume-page {
     margin: -29px -4px -29px -20px;

@@ -4,6 +4,7 @@
     width: 100%;
     font-size: .85em;
     max-width: 720px;
+    margin: auto;
 }
 @media(min-width: 720px){
     #resume {

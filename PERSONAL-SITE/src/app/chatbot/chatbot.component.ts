@@ -13,7 +13,7 @@ export class ChatbotComponent implements OnInit {
   input: string;
   conversationId: string;
   currentChat: Array<ChatbotMessage>;
-  sendMessage = new Subject<string>();
+  messageStream = new Subject<string>();
   defaultMessage: ChatbotMessage;
 
   constructor(private chatbotService: ChatbotService) { }
@@ -30,17 +30,21 @@ export class ChatbotComponent implements OnInit {
     };
     this.conversationId = '';
 
-    this.sendMessage
+    this.messageStream
       .debounceTime(1000)
-      .subscribe(input => {
-        this.chatbotService.sendMessage(input, this.conversationId)
-        .subscribe( response => {
-          this.conversationId = response.conversationId;
-          this.currentChat.push(response);
-        })
-      })
+      .subscribe((input: string )=> this.sendMessageToServer(input));
   }
-  
+
+  sendMessageToServer = (input: string) => {
+    this.chatbotService.sendMessage(input, this.conversationId)
+      .subscribe((input) => this.setMessageFromServer(input));
+  }
+
+  setMessageFromServer = (input:ChatbotMessage) => {
+    this.conversationId = input.conversationId;
+    this.currentChat.push(input);
+  }
+
   setMessageClass(source: string){
     return (source === 'user') ? 'user-message' : 'bot-message'; 
   }
@@ -49,7 +53,7 @@ export class ChatbotComponent implements OnInit {
     let input = this.input.trim();
     if(input) {
       this.currentChat.push({source: 'user', message: input});
-      this.sendMessage.next(input);
+      this.messageStream.next(input);
     }
     this.input = '';
   }
