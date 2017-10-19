@@ -10,7 +10,6 @@ import { NavigationService } from '../navigation/navigation.service';
 export class LayoutComponent implements OnInit {
   pages: Array<Page>
   currentPage: Page;
-  test;
   
   constructor(private nav: NavigationService) {}
   ngOnInit(): void {

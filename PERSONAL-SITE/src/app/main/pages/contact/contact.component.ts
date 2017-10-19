@@ -8,6 +8,7 @@ import { TempApiService } from './temp-api.service';
   providers: [TempApiService]
 })
 export class ContactComponent implements OnInit {
+  //should have : types;
   form;
   message;
   canSubmit;

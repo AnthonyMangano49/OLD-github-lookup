@@ -8,16 +8,18 @@ import { Page, Pages } from '../pages/utilities';
   styleUrls: ['./side-slider.component.css']
 })
 export class SideSliderComponent implements OnInit{
-
   constructor(private nav: NavigationService ) {}
   pages: Array<Page>;
   currentPage: number;
 
   ngOnInit(): void {
-      this.pages = Pages  
-      this.nav.currentPage.subscribe((page: Page) => {
-        this.currentPage = page.id
-      });
-      
+    this.init()     
+  }
+
+    init() {
+    this.pages = Pages  
+    this.nav.currentPage.subscribe((page: Page) => {
+      this.currentPage = page.id
+    });
   }
 }

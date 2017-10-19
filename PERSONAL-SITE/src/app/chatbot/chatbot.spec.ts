@@ -36,7 +36,7 @@ describe('ChatbotComponent', () => {
   });
 
   it('should create', () => {
-    expect(true).toBeTruthy();
+    expect(component).toBeTruthy();
   });
 
   describe('component init', () => {
