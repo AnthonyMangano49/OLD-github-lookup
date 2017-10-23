@@ -13,6 +13,10 @@ export class LayoutComponent implements OnInit {
   
   constructor(private nav: NavigationService) {}
   ngOnInit(): void {
+    this.init();
+  }
+
+  init(){
     this.pages = Pages;
     this.nav.currentPage.subscribe((page: Page) => {
       this.currentPage = page
