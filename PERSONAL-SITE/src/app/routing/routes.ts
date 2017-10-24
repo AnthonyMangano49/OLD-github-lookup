@@ -12,7 +12,12 @@ export const routes: Routes = [
     }, {
         path: 'chat',
         loadChildren: '../chatbot/chatbot.module#ChatbotModule'
-    }, { 
+    }, 
+    {
+        path: 'quiz',
+        loadChildren: '../dynamic-quiz/dynamic-quiz.module#DynamicQuizModule'
+    },
+     { 
       path: '**', 
       redirectTo: 'main'
     //   component: PageNotFound

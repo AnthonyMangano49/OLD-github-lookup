@@ -10,13 +10,13 @@
 #contact-container {
     margin: auto;
     max-width: 720px;
-    padding: 10px;
+    padding-top: 5px;
     background: #45556a;
 }
 .contact-item {
     display: flex;
     flex-direction: column;
-    padding: 10px;
+    padding: 0 7px 5px;
 }
 #contact-message {
     font-weight: bold;
