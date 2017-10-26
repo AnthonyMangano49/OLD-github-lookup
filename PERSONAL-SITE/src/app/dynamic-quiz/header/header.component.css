@@ -1,0 +1,21 @@
+.fa{
+    cursor: pointer;
+}
+#quiz-header-container {
+    display: flex;
+    background: white;
+    padding: 15px;
+}
+#quiz-header-spacer {
+    flex: 1;
+}
+#quiz-logo-left, #quiz-logo-right {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+#quiz-logo-left {
+    color: #8DAA91;
+}
+#quiz-logo-right {
+    color: #28112B;
+}

@@ -7,6 +7,7 @@ import { QuizReviewComponent } from './quiz-review/quiz-review.component';
 import { QuizSearchComponent } from './quiz-search/quiz-search.component';
 import { QuizRoutes } from './quiz-routes';
 import { DynamicQuizComponent } from './dynamic-quiz.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   imports: [
@@ -18,7 +19,8 @@ import { DynamicQuizComponent } from './dynamic-quiz.component';
     LoginComponent,
     QuizComponent,
     QuizReviewComponent,
-    QuizSearchComponent
+    QuizSearchComponent,
+    HeaderComponent
   ]
 })
 export class DynamicQuizModule { }
