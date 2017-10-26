@@ -20,15 +20,15 @@ export const QuizRoutes = [
             }, {
                 path: 'search',
                 component: QuizSearchComponent,
-                canActivate: [AuthGuardService]
+                // canActivate: [AuthGuardService]
             }, {
                 path: 'take/:name',
                 component: QuizComponent,
-                canActivate: [AuthGuardService]
+                // canActivate: [AuthGuardService]
             }, {
                 path: 'review',
                 component: QuizReviewComponent,
-                canActivate: [AuthGuardService]
+                // canActivate: [AuthGuardService]
             }, {
                 path:'**',
                 redirectTo: 'review'
