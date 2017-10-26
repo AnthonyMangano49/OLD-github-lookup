@@ -4,6 +4,7 @@ import { QuizComponent } from "./quiz/quiz.component";
 import { QuizReviewComponent } from "./quiz-review/quiz-review.component";
 import { QuizSearchComponent } from "./quiz-search/quiz-search.component";
 import { AuthGuardService } from "./authentication/auth-guard.service";
+import { QuizDashboardComponent } from "./quiz-dashboard/quiz-dashboard.component";
 
 export const QuizRoutes = [
     {
@@ -17,6 +18,10 @@ export const QuizRoutes = [
             }, {
                 path: 'login',
                 component: LoginComponent,
+            }, {
+                path: 'dashboard',
+                component: QuizDashboardComponent,
+                // canActivate: [AuthGuardService]
             }, {
                 path: 'search',
                 component: QuizSearchComponent,

@@ -1,0 +1,72 @@
+<div id= "dashboard-image-container">
+  <div id="dashboard-image-text">
+    <div id="dashboard-title">Entertainment Quiz</div>
+    <div id="dashboard-sub-title">Try Now</div>
+  </div>
+</div>
+
+<div id= "dashboard-record-container">
+    
+  <!-- todo/spaghetti move into component -->
+  <div class="dashboard-panel">
+      <div class="panel-title">Personal Records</div>
+      <div class="panel-content">
+        <div class="panel-sort">
+          <label>Sort By</label>
+          <select></select>
+        </div>
+        <div class="panel-display">
+          <div class="display-item" *ngFor="let thing of [0,1,2,3,4,5,6,7,8,9]">
+              <div>
+                Thing 1
+              </div>
+              <div>
+                Thing 2
+              </div>
+              <div>
+                Thing 3
+              </div>
+          </div>
+        </div>
+      </div>
+  </div>
+    <!-- todo/spaghetti move into component -->
+    <div class="dashboard-panel">
+        <div class="panel-title">Overall Records</div>
+        <div class="panel-content">
+          <div class="panel-sort">
+            <label>Sort By</label>
+            <select></select>
+          </div>
+          <div class="panel-display">
+            <div class="display-item" *ngFor="let thing of [0,1,2,3,4,5,6,7,8,9]">
+                <div>
+                  Thing 1
+                </div>
+                <div>
+                  Thing 2
+                </div>
+                <div>
+                  Thing 3
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+</div>
+
+<div id= "dashboard-account-container">
+    <div id="dashboard-username">
+      <div>username</div>
+      <div>guest</div>
+    </div>
+    <div id="dashboard-password">
+        <div>password</div>
+        <input>
+    </div>
+    <div id="dashboard-date">
+        <div>last sign-in</div>
+        <div>10/25/2017</div>
+    </div>
+</div>

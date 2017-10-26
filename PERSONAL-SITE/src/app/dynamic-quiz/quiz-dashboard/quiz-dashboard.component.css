@@ -1,0 +1,110 @@
+:host {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+#dashboard-image-container {
+    min-height: 200px;
+    height: 35vh;
+    background-image: url(http://seniorcenter.ellington-ct.gov/ImageRepository/Path?filePath=%2Fdocuments%5CIntranet%5C29%5C42%2FRed+seats+at+concert+theatre.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#dashboard-image-text {
+    background: black;
+    text-align: center;
+}
+#dashboard-title{
+    padding: 10px;
+    font-size: 2em;
+    color: white;
+}
+#dashboard-sub-title{
+    padding: 5px;
+    background: white;
+    cursor: pointer;
+    color: black;
+}
+#dashboard-sub-title:active{
+    background: 	#C5B358;
+}
+#dashboard-try-now {
+    padding: 5px;
+    font-size: 1.25em;
+}
+#dashboard-record-container {
+    background: white;
+    padding: 25px;
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 0;
+}
+#dashboard-record-container > * {
+    flex: 1;
+    padding: 5px;
+}
+#dashboard-account-container {
+    padding: 25px;
+    display: flex;
+    flex-direction: row;
+}
+#dashboard-account-container > div {
+    flex: 1;
+}
+#dashboard-account-container > div > * {
+    width: 100%;
+    text-align: center;
+}
+
+
+/* move in component */
+.dashboard-panel {
+    display: flex;
+    flex-direction: column;
+}
+.panel-title {
+    padding: 15px;
+    text-align: center;
+    background: #28112b;
+    color: #9fa1a3;
+    text-transform: uppercase;
+    font-size: 1.25em;
+}
+.panel-content {
+    border: 5PX SOLID #28112b;
+    display: flex;
+    flex-direction: column;
+}
+.panel-sort {
+    display: flex;
+}
+.panel-sort label, .panel-sort select {
+    padding: 10px;
+    border: 1px solid #9fa1a3;
+}
+.panel-sort label {
+    background: #9fa1a3;
+    color: white;
+}
+.panel-sort select {
+    flex: 1 1 0;
+}
+.panel-display {
+    display: flex;
+    flex-direction: column;
+    background: #cebf73;
+    color: black;
+}
+.display-item{
+    display: flex;
+    flex-direction: row;
+    padding: 10px 0;
+}
+.display-item *{
+    text-align: center;
+    flex: 1;
+}

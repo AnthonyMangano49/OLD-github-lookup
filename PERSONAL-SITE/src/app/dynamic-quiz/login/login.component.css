@@ -9,9 +9,8 @@
     min-height: 200px;
     display: flex;
     flex-direction: column;
-    background: linear-gradient(#28112B, white);
+    background: white;
     color: #28112B;
-    font-weight: bold;
 }
 #login-message {
     justify-content: center;
@@ -28,7 +27,7 @@
     padding: 0 5px;
     flex: 2;
     margin: 5px 0 5px 5px;
-    background: #8DAA91;
+    background: 	#C5B358;
 }
 .login-row input {
     flex: 3;
@@ -39,7 +38,7 @@
 .login-row button {
     flex: 1;
     margin: 5px;
-    background: #8DAA91;
+    background: 	#C5B358;
     border: none;
     outline: none;
     cursor: pointer;
