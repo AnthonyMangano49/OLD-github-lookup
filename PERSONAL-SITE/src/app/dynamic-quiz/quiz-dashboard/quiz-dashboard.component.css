@@ -3,6 +3,11 @@
     flex: 1;
     flex-direction: column;
 }
+#dashboard-landing-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
 #dashboard-image-container {
     min-height: 200px;
     height: 35vh;
@@ -38,28 +43,91 @@
 }
 #dashboard-record-container {
     background: white;
-    padding: 25px;
+    padding: 5px;
     display: flex;
-    flex-direction: row;
+    /* flex-direction: row; */
+    flex-direction: column;
     flex-shrink: 0;
+}
+@media(min-width: 720px){
+    #dashboard-record-container {
+        flex-direction: row;
+        padding: 25px;
+    }
 }
 #dashboard-record-container > * {
     flex: 1;
     padding: 5px;
 }
 #dashboard-account-container {
-    padding: 25px;
+    padding: 5px;
     display: flex;
-    flex-direction: row;
+    flex-shrink: 0;
+    flex-direction: column;
+    align-items: center;
 }
-#dashboard-account-container > div {
+@media(min-width: 660px){
+    #dashboard-account-container {
+        flex-direction: row;
+        align-items: normal;
+        justify-content: space-around;    
+    }
+    .account-item {
+        width: auto !important;
+        min-width: 200px;
+        max-width: 350px;
+    }
+}
+.account-item {
+    width: 320px;
+    display: flex;
+    flex-direction: column;
     flex: 1;
-}
-#dashboard-account-container > div > * {
-    width: 100%;
+    background: white;
+    border: 2px solid #cebf73;
+    margin: 5px;
     text-align: center;
 }
-
+.account-item-title{
+    background: #cebf73;
+    color: white;
+    text-transform: uppercase;
+}
+.account-item-content {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+#account-password {
+    padding-top: 5px;
+}
+#account-password input {
+    border-width: 0 0 1px 0;
+    border-color: #28112b;
+    outline: none;
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+#account-password-buttons {
+    display: flex;
+    text-transform: uppercase;
+}
+#account-password-buttons > * {
+    cursor: pointer;
+    flex: 1;
+    padding: 5px;
+    background: #9fa1a3;
+    color: white;
+}
+#account-password-buttons > *:active{
+    color: #9fa1a3;
+    background: white;
+}
+#account-password-buttons > *:first-child{
+    border-right: 1px solid white;
+}
 
 /* move in component */
 .dashboard-panel {
@@ -70,7 +138,7 @@
     padding: 15px;
     text-align: center;
     background: #28112b;
-    color: #9fa1a3;
+    color: white;
     text-transform: uppercase;
     font-size: 1.25em;
 }

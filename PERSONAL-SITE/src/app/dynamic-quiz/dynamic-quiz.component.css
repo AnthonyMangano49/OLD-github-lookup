@@ -9,7 +9,18 @@
     flex: 1;
     overflow: auto;
 }
+::-webkit-scrollbar {
+    width: 10px;
+}
 
+::-webkit-scrollbar-track {
+    background: #cebf73;
+
+}
+::-webkit-scrollbar-thumb {
+    background: rgb(241, 241, 241);
+    border: 1px solid #cebf73;
+}
 /* color: #8DAA91;
 color: #788475;
 color: #8DAA91;
