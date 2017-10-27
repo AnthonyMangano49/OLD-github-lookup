@@ -3,16 +3,60 @@
     display: flex;
     flex-direction: column;
 }
-#quiz-search-filters {
+#quiz-filter-sort{
     background: #9fa1a3;
     display: flex;
-    padding: 15px 0;
+    flex-direction: column;
 }
+.filter-row {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+}
+.filter-row > * {
+    flex:1;
+    display: flex;
+    padding: 5px;
+    min-width: 300px;
+}
+.filter-row label {
+    padding: 7px;
+    flex:1;
+    background:#28112b;
+    color: white;
+    text-align: center;
+}
+.filter-row select {
+    flex:3;
+    border-color: #28112b;
+}
+#filter-sort {
+    flex: 3;
+    display: flex;
+}
+#filter-sort i{
+    background: #28112b;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+}
+#filter-spacer {
+    display: none;
+}
+@media(min-width: 630px) and (max-width: 939px){
+    #filter-spacer {
+        display: flex;
+    }
+}
+
 #quiz-search-contents {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     max-width: 1600px;
+    margin: auto;
 }
 .quiz-search-item {
     margin: 5px;

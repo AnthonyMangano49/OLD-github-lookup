@@ -1,6 +1,29 @@
 <div id="quiz-search-container">
-  <div id="quiz-search-filters">
-    top
+  <div id="quiz-filter-sort">
+    <div class="filter-row">
+      <div>
+        <label>Category</label>
+        <select>
+          <option>1</option>
+        </select>
+      </div>
+      <div>
+        <label>Difficulty</label>
+        <select>
+          <option>1</option>
+        </select>
+      </div>
+      <div id="filter-spacer"></div>
+      <div>
+        <label>Sort</label>
+        <div id="filter-sort">
+          <select>
+            <option>1</option>
+          </select>
+          <i class="fa fa-sort-amount-desc"></i>
+        </div>
+      </div>
+    </div>
   </div>
   <div id="quiz-search-contents">
     <div class="quiz-search-item" *ngFor="let i of [0,1,2,3,4,5,6,7,8]">
