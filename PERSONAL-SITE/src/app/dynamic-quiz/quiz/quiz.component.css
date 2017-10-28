@@ -1,0 +1,70 @@
+:host {
+    display: flex;
+    flex: 1;
+    padding: 15px;
+}
+#quiz-container {
+    background: white;
+    max-width: 75em;
+    margin: auto;
+}
+
+#question-index-container {
+    display: flex;
+    border-bottom: 0.125em solid #c5b358;
+    color: #c5b358;
+}
+.question-index-item {
+    flex: 1;
+    text-align: center;
+    padding: 0.625em 0;
+}
+/* todo */
+.question-index-item:first-child {
+    background: #c5b358;
+    color: white;
+}
+#question-container {    
+    padding: 1em;
+    border-bottom: 0.125em solid #bab8b4;
+}
+#question-answer-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding:0.3125em 0;
+}
+.question-answer {
+    width: 45%;
+    margin: 0.3125em;
+    cursor: pointer;
+    display: flex;
+    /* border-bottom: 2px solid #bab8b4; */
+}
+.answer-key {
+    background: #28112b;
+    color: white;
+    width: 1.25em;
+    padding: 0.625em;
+    text-align: center;
+}
+.answer-value {
+    flex: 1;
+    padding: 0.625em;
+    border-bottom: 0.125em solid #28112b;
+}
+.question-answer:hover {
+    background: #bab8b4;
+    color: white;
+}
+#question-navigation-container {
+    display: flex;
+    flex-direction: row;
+    background: #c5b358;
+    padding: .625em;
+    color: white;
+}
+#question-navigation-spacer {
+    flex: 1;
+}
