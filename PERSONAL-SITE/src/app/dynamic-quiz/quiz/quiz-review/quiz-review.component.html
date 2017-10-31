@@ -1,0 +1,39 @@
+<div id="review-container">
+  <div id="review-scores">
+    <div id="percent">
+      8/10
+    </div>
+    <div id="percent">
+      80%
+    </div>
+  </div>
+  <div id="review-questions">
+    <div class="question-container" *ngFor="let result of ['correct', 'incorrect']">
+      <div class="review-question-header">
+        {{result}}
+      </div>
+      <div class="question-content">
+        <div class="question-content-row">
+          <div class="question-row">
+            <div class="question-label">Q</div>
+            <div class="question initial">blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</div>    
+          </div>
+          <div class="question-row isCorrect" [ngClass]="result">
+            <div class="question-label"><i class="fa fa-check"></i></div>
+            <div class="question">blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</div>    
+          </div>  
+          <div class="question-row isIncorrect" *ngIf="result === 'incorrect'">
+              <div class="question-label"><i class="fa fa-times"></i></div>
+              <div class="question">blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</div>    
+          </div>  
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="quiz-return">
+    <div id="quiz-return-spacer"></div>
+    <div id="quiz-return-button">
+      return
+    </div>
+  </div>
+</div>

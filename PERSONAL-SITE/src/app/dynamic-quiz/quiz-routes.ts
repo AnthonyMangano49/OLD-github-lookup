@@ -1,9 +1,10 @@
 import { DynamicQuizComponent } from "./dynamic-quiz.component";
 import { LoginComponent } from "./login/login.component";
-import { QuizComponent } from "./quiz/quiz.component";
 import { QuizSearchComponent } from "./quiz-search/quiz-search.component";
 import { AuthGuardService } from "./authentication/auth-guard.service";
 import { QuizDashboardComponent } from "./quiz-dashboard/quiz-dashboard.component";
+import { QuizReviewComponent } from "./quiz/quiz-review/quiz-review.component";
+import { QuizComponent } from "./quiz/quiz.component";
 
 export const QuizRoutes = [
     {
