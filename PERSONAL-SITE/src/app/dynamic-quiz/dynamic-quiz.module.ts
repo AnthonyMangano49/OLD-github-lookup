@@ -10,11 +10,16 @@ import { QuizDashboardComponent } from './quiz-dashboard/quiz-dashboard.componen
 import { QuizReviewComponent } from './quiz/quiz-review/quiz-review.component';
 import { QuizComponent } from './quiz/quiz.component';
 import { QuizTakeComponent } from './quiz/quiz-take/quiz-take.component';
+import { UsersService } from './authentication/users.service';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule.forChild(QuizRoutes)
+    RouterModule.forChild(QuizRoutes),
+    FormsModule,
+    HttpClientModule
   ],
   declarations: [
     DynamicQuizComponent,
@@ -25,6 +30,7 @@ import { QuizTakeComponent } from './quiz/quiz-take/quiz-take.component';
     QuizSearchComponent,
     HeaderComponent,
     QuizDashboardComponent,
-  ]
+  ],
+  providers: [UsersService]
 })
 export class DynamicQuizModule { }
