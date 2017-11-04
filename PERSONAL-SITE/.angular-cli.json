@@ -9,6 +9,7 @@
       "outDir": "dist",
       "assets": [
         "assets",
+        "app/dynamic-quiz/assets",
         "favicon.ico"
       ],
       "index": "index.html",

@@ -15,6 +15,7 @@
 #login-message {
     justify-content: center;
     align-items: center;
+    text-transform: capitalize;
 }
 .login-row {
     display: flex;
@@ -44,4 +45,8 @@
     cursor: pointer;
     text-transform: uppercase;
     font-weight: bold;
+}
+.login-row button:active {
+    background:white;
+    border: 1px solid #C5B358;
 }

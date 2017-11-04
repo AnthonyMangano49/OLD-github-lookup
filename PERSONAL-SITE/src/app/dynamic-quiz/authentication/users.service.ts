@@ -37,6 +37,10 @@ export class UsersService {
   login(user: User) {
     return this.http.post(Api.login, {login: user.login, password: user.password})
       .map((response: Response) : BaseResponse => {
+        localStorage.setItem('login', response['login']);
+        localStorage.setItem('lastLogin', response['lastLogin']);
+        localStorage.setItem('ownerId', response['ownerId']);
+        localStorage.setItem('token', response['user-token']);
         return {
           isSuccess: true,
           message: 'success'

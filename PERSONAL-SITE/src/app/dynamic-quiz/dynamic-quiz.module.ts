@@ -13,6 +13,7 @@ import { QuizTakeComponent } from './quiz/quiz-take/quiz-take.component';
 import { UsersService } from './authentication/users.service';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { QuizService } from './shared/quiz-service';
 
 @NgModule({
   imports: [
@@ -31,6 +32,6 @@ import { HttpClientModule } from '@angular/common/http';
     HeaderComponent,
     QuizDashboardComponent,
   ],
-  providers: [UsersService]
+  providers: [UsersService, QuizService]
 })
 export class DynamicQuizModule { }

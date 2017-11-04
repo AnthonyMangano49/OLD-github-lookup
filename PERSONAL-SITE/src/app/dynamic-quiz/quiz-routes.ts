@@ -18,6 +18,7 @@ export const QuizRoutes = [
             }, {
                 path: 'login',
                 component: LoginComponent,
+                //authguard if already logged in direct to dash
             }, {
                 path: 'dashboard',
                 component: QuizDashboardComponent,

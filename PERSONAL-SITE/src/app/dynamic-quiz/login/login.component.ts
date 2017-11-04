@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UsersService } from '../authentication/users.service';
 import { User } from '../authentication/auth.utilities';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'login',
@@ -10,7 +11,7 @@ import { User } from '../authentication/auth.utilities';
 export class LoginComponent implements OnInit {
   userModel: User;
   message: string;
-  constructor(private usersService: UsersService) { }
+  constructor(private usersService: UsersService, private router: Router) { }
 
   ngOnInit() {
     this.userModel = new User('','');
@@ -28,7 +29,11 @@ export class LoginComponent implements OnInit {
 
   loginUser(){
     if(this.validate()) 
-      this.usersService.login(this.userModel).subscribe(response => alert(response.message));
+      this.usersService.login(this.userModel).subscribe(response => {
+        if(response.isSuccess) 
+          this.router.navigate(['quiz/dashboard']);
+        else this.message = response.message;
+      });
   }
 
   validate() {

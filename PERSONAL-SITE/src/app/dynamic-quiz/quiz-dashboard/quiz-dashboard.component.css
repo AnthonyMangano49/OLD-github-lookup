@@ -11,7 +11,7 @@
 #dashboard-image-container {
     min-height: 200px;
     height: 35vh;
-    background-image: url(http://seniorcenter.ellington-ct.gov/ImageRepository/Path?filePath=%2Fdocuments%5CIntranet%5C29%5C42%2FRed+seats+at+concert+theatre.jpg);
+    background-image: url(../assets/entertainment.png);
     background-size: cover;
     background-position: center;
     display: flex;
@@ -27,6 +27,7 @@
     padding: 10px;
     font-size: 2em;
     color: white;
+    text-transform: capitalize;
 }
 #dashboard-sub-title{
     padding: 5px;
@@ -36,10 +37,6 @@
 }
 #dashboard-sub-title:active{
     background: 	#C5B358;
-}
-#dashboard-try-now {
-    padding: 5px;
-    font-size: 1.25em;
 }
 #dashboard-record-container {
     background: white;
@@ -98,6 +95,9 @@
     flex: 1;
     justify-content: center;
     align-items: center;
+}
+#account-username {
+    text-transform: uppercase;
 }
 #account-password {
     padding-top: 5px;

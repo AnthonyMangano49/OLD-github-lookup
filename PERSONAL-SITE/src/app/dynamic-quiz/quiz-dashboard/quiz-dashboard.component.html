@@ -1,21 +1,22 @@
-<div id= "dashboard-image-container">
+<div id= "dashboard-image-container" [ngStyle]="setImage(currentQuiz.imageUrl)">
   <div id="dashboard-image-text">
-    <div id="dashboard-title">Entertainment Quiz</div>
-    <div id="dashboard-sub-title">Try Now</div>
+    <div id="dashboard-title">{{currentQuiz.displayName}} quiz </div>
+    <div id="account-password-buttons">
+      <div [routerLink] = "['/quiz/take', currentQuiz.name]">Try Now</div>
+      <div routerLink = "/quiz/search">View All</div>
+    </div>
   </div>
 </div>
-  
-
 
 <div id= "dashboard-account-container">
     <div class="account-item">
       <div class="account-item-title">username</div>
-      <div class="account-item-content">guest</div>
+      <div class="account-item-content" id="account-username">{{userName}}</div>
     </div>
     <div class="account-item">
         <div class="account-item-title">password</div>
         <div id="account-password">
-          <input type = "password">
+          <input type="password" #password>
         </div>
         <div id="account-password-buttons">
             <div>show</div>
@@ -24,7 +25,7 @@
     </div>
     <div class="account-item">
         <div class="account-item-title">last sign-in</div>
-        <div  class="account-item-content">10/25/2017</div>
+        <div  class="account-item-content">{{lastLogin | date: 'shortDate'}}</div>
     </div>
 </div>
 
