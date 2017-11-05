@@ -13,7 +13,7 @@ import { QuizTakeComponent } from './quiz/quiz-take/quiz-take.component';
 import { UsersService } from './authentication/users.service';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { QuizService } from './shared/quiz-service';
+import { QuizService } from './shared/quiz.service';
 
 @NgModule({
   imports: [

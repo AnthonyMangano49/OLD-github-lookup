@@ -103,8 +103,7 @@
     padding-top: 5px;
 }
 #account-password input {
-    border-width: 0 0 1px 0;
-    border-color: #28112b;
+    border: none;
     outline: none;
     width: 100%;
     padding: 5px;
@@ -152,7 +151,8 @@
 }
 .panel-sort label, .panel-sort select {
     padding: 10px;
-    border: 1px solid #9fa1a3;
+    border: none;
+    outline: none;
 }
 .panel-sort label {
     background: #9fa1a3;
@@ -164,15 +164,28 @@
 .panel-display {
     display: flex;
     flex-direction: column;
-    background: #cebf73;
-    color: black;
+    background: white;
 }
-.display-item{
+.panel-title-display {
+    display: flex;
+    background: #cebf73;
+    border: 2px solid #cebf73;
+    color: white;
+    padding: 5px;
+    text-transform: uppercase;
+}
+.panel-title-display > *:first-child{
+    border-right: 1px solid white;
+}
+.panel-title-display > *:last-child{
+    border-left: 1px solid white;
+}
+.display-item {
     display: flex;
     flex-direction: row;
     padding: 10px 0;
 }
-.display-item *{
+.display-item *, .panel-title-display *{
     text-align: center;
     flex: 1;
 }

@@ -11,7 +11,7 @@
 <div id= "dashboard-account-container">
     <div class="account-item">
       <div class="account-item-title">username</div>
-      <div class="account-item-content" id="account-username">{{userName}}</div>
+      <div class="account-item-content" id="account-username">{{login}}</div>
     </div>
     <div class="account-item">
         <div class="account-item-title">password</div>
@@ -30,50 +30,31 @@
 </div>
 
 <div id= "dashboard-record-container">
-    <!-- todo/spaghetti move into component -->
-    <div class="dashboard-panel">
-      <div class="panel-title">Personal Records</div>
-      <div class="panel-content">
-        <div class="panel-sort">
-          <label>Sort By</label>
-          <select></select>
-        </div>
-        <div class="panel-display">
-          <div class="display-item" *ngFor="let thing of [0,1,2,3,4,5,6,7,8,9]">
-            <div>
-              Thing 1
-            </div>
-            <div>
-              Thing 2
-            </div>
-            <div>
-              Thing 3
-            </div>
-          </div>
+  <div class="dashboard-panel" *ngFor="let record of records">
+    <div class="panel-title">{{record.title}}</div>
+    <div class="panel-content">
+      <div class="panel-sort">
+        <label>Sort By</label>
+        <select></select>
+      </div>
+      <div class="panel-title-display">
+        <div class="title-item" *ngFor="let title of ['username', 'category', 'score']">
+            {{title}}
         </div>
       </div>
-    </div>
-    <!-- todo/spaghetti move into component -->
-    <div class="dashboard-panel">
-      <div class="panel-title">Overall Records</div>
-      <div class="panel-content">
-        <div class="panel-sort">
-          <label>Sort By</label>
-          <select></select>
-        </div>
-        <div class="panel-display">
-          <div class="display-item" *ngFor="let thing of [0,1,2,3,4,5,6,7,8,9]">
-            <div>
-              Thing 1
-            </div>
-            <div>
-              Thing 2
-            </div>
-            <div>
-              Thing 3
-            </div>
+      <div class="panel-display" *ngIf="record.values">
+        <div class="display-item" *ngFor="let values of record.values">
+          <div>
+            {{values.login}}
+          </div>
+          <div>
+            {{values.displayName}}
+          </div>
+          <div>
+            {{values.score}}
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>

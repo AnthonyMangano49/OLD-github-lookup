@@ -1,5 +1,5 @@
-import {Api, ErrorCodes, GuestCredentials} from './auth-config'
 import { Observable } from 'rxjs/Observable';
+import { ErrorCodes, Api, GuestCredentials } from '../shared/api.config';
 
 class User  {
     constructor(_login: string, _password: string) {
