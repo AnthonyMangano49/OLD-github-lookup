@@ -1,7 +1,7 @@
 <div id="quiz-search-container">
   <div id="quiz-filter-sort">
     <div class="filter-row">
-      <div>
+      <!-- <div>
         <label>Category</label>
         <select>
           <option>1</option>
@@ -22,12 +22,18 @@
           </select>
           <i class="fa fa-sort-amount-desc"></i>
         </div>
+      </div> -->
+      <!-- <div></div> -->
+      <div>
+        save top bar and sort for warm up tmrw
+        <i class="fa fa-sort-amount-asc"></i>
       </div>
     </div>
   </div>
   <div id="quiz-search-contents">
-    <div class="quiz-search-item" *ngFor="let i of [0,1,2,3,4,5,6,7,8]">
-      <img src="http://photoevo.com/wp-content/uploads/2016/05/300X300.png">
+    <div class="quiz-search-item" *ngFor="let quiz of quizList" [routerLink]="['/quiz/take', quiz.name]">
+      <div class="search-item-text">{{quiz.displayName}}</div>
+      <img [src]="quiz.minImageUrl">
     </div>
   </div>
 </div>
