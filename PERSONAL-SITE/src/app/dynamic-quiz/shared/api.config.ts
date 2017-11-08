@@ -18,4 +18,6 @@ const ErrorCodes = {
     8000: "max length exceeded"
 }
 
-export {Api, ErrorCodes, GuestCredentials}
+let PasswordManager = ([... str]) => {alert('Feature not available on current account!')}
+
+export {Api, ErrorCodes, GuestCredentials, PasswordManager}

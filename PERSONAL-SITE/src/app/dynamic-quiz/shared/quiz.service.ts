@@ -36,6 +36,8 @@ export class QuizService {
         let record = new RecordCategory(element['quiz_name'], element['login'], element['quiz_score']);
         response.push(record);
       });
+      if(!response.length)
+        response.push(new RecordCategory('N/A', 'N/A', 'N/A'));
       return(response);
     });
   }

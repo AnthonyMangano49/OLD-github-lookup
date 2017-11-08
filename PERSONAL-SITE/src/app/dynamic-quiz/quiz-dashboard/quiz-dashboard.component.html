@@ -18,7 +18,7 @@
         <div id="account-password">
           <input type="password" #password>
         </div>
-        <div id="account-password-buttons">
+        <div id="account-password-buttons" (click)="updatePassword(password)">
             <div>show</div>
             <div>update</div>
         </div>
@@ -28,14 +28,16 @@
         <div  class="account-item-content">{{lastLogin | date: 'shortDate'}}</div>
     </div>
 </div>
-
 <div id= "dashboard-record-container">
   <div class="dashboard-panel" *ngFor="let record of records">
     <div class="panel-title">{{record.title}}</div>
     <div class="panel-content">
       <div class="panel-sort">
-        <label>Sort By</label>
-        <select></select>
+        <label>category</label>
+        <select #test (change)="filterRecords(record.title, test.value)"> 
+          <option value="">all</option>
+          <option *ngFor="let category of categorySelect" [value]="category.name">{{category.displayName}}</option>
+        </select>
       </div>
       <div class="panel-title-display">
         <div class="title-item" *ngFor="let title of ['username', 'category', 'score']">
