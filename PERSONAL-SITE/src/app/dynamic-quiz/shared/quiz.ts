@@ -25,7 +25,6 @@ interface ICategory {
     name: string,
     displayName: string,
 }
-
 interface IRecordCategory extends ICategory {
     login: string;
     score: string;
@@ -33,7 +32,17 @@ interface IRecordCategory extends ICategory {
 interface IDisplayCategory extends ICategory {
     imageUrl: string,
     minImageUrl: string,
-    queryUrl: string
+}
+interface IQuizQuestion {
+    question: string,
+    answers: Array<{
+        answer: string;
+        isCorrect: boolean;
+    }>
+}
+interface IQuiz extends IRecordCategory {
+    queryUrl: string;
+    quizQuestions: Array<IQuizQuestion>;
 }
 
 class Category implements ICategory {
@@ -66,7 +75,6 @@ class DisplayCategory extends Category implements IDisplayCategory {
         super(input);
         this.imageUrl = `app/dynamic-quiz/assets/${input}.png`;
         this.minImageUrl = `app/dynamic-quiz/assets/${input}-min.png`;
-        this.queryUrl = setUrl(this.id);
     }
 
     imageUrl: string;
@@ -77,4 +85,19 @@ class DisplayCategory extends Category implements IDisplayCategory {
     displayName: string;
 }
 
-export {CategoryNames, IDisplayCategory, IRecordCategory, DisplayCategory, RecordCategory}
+class Quiz extends Category implements IQuiz {
+    constructor(input) {
+        super(input);
+        this.queryUrl = setUrl(this.id);
+        this.quizQuestions = [];
+    }
+    id: number;
+    name: string;
+    displayName: string;
+    queryUrl: string;
+    quizQuestions: IQuizQuestion[];
+    login: string;
+    score: string;
+}
+
+export {CategoryNames, IDisplayCategory, IRecordCategory, DisplayCategory, RecordCategory, IQuizQuestion, IQuiz, Quiz}

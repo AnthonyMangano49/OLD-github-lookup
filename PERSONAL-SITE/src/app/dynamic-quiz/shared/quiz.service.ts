@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { IDisplayCategory, DisplayCategory, CategoryNames, IRecordCategory, RecordCategory } from './quiz';
+import { IDisplayCategory, DisplayCategory, CategoryNames, IRecordCategory, RecordCategory, Quiz, IQuiz, IQuizQuestion } from './quiz';
 import { HttpClient } from '@angular/common/http';
 import { Api } from './api.config';
 
@@ -39,6 +39,39 @@ export class QuizService {
       if(!response.length)
         response.push(new RecordCategory('N/A', 'N/A', 'N/A'));
       return(response);
+    });
+  }
+
+  generateQuiz (name) {
+    let quiz = new Quiz(name);
+    return this.http.get(quiz.queryUrl).map((response: any) => {
+      response = response.results;
+      for(let res in response) {
+        let curr = response[res];
+        let correct = curr.correct_answer;
+        let incorrect = curr.incorrect_answers;
+        
+        let question: IQuizQuestion = {
+          question: '',
+          answers: []
+        };
+
+        question.question = curr.question;
+        question.answers.push({
+          answer: correct,
+          isCorrect: true
+        });
+
+        for(let answer in incorrect) {
+          question.answers.push({
+            answer: incorrect[answer],
+            isCorrect: false
+          });
+        }
+
+        quiz.quizQuestions.push(question);
+      }
+      return quiz;
     });
   }
 }

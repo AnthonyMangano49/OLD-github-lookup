@@ -8,6 +8,7 @@ import { QuizService } from '../shared/quiz.service';
 })
 export class QuizSearchComponent implements OnInit {
   quizList;
+  sortIcon = 'desc';
 
   constructor(private service: QuizService) { }
 
@@ -16,11 +17,21 @@ export class QuizSearchComponent implements OnInit {
   }
 
   init(){
-    this.quizList = this.service.getCategories().sort((a,b) => a.name > b.name ? 1 : -1);
+    this.quizList = this.service.getCategories();
+    this.sort();
   }
 
   setImage(image){
     return {'background-image': `url(${image})`}
+  }
+
+  sort = () => {
+    if(this.sortIcon === 'asc')
+      this.quizList = this.quizList.sort((a, b) => a.name > b.name ? -1 : 1);
+    else
+      this.quizList = this.quizList.sort((a, b) => a.name > b.name ? 1 : -1);
+
+    this.sortIcon = (this.sortIcon === 'asc') ? 'desc' : 'asc';
   }
 
 }

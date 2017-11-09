@@ -15,6 +15,7 @@
     padding: 1em;
     color:#28112b;
     font-weight: bold;
+    text-transform: capitalize;
 }
 #question-index-container {
     display: flex;
